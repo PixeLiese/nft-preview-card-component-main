@@ -1,0 +1,178 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    color: hsl(0, 0%, 100%);
+}
+
+
+/* ## Colors
+
+### Primary
+
+- Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%)
+
+### Neutral
+
+- Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%) 
+
+### Font
+
+- Family: [Outfit](https://fonts.google.com/specimen/Outfit)
+- Weights: 300, 400, 600
+font-family: 'Outfit', sans-serif;
+*/
+
+/* __________________   GENERAL _________________________*/ 
+
+body{
+    background-color: hsl(217, 54%, 11%);
+}
+
+main{
+    background-color: hsl(216, 50%, 16%);
+    width: 350px;
+    margin: 200px auto 200px auto;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 120px;
+}
+
+/* @media screen and (max-width:400px) {
+    main{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+} */
+
+
+p{
+    color: hsl(215, 51%, 70%);
+}
+
+/* ___________________     CONTENT      ________________*/
+
+.cube-image{
+    width: 100%;
+    border-radius: 12px;
+}
+
+.image-frame{
+    margin: auto;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+
+/* ___ hover ____*/
+
+.hover-image{
+    display: block; 
+/* Transformer img de inline en block pour faire un flex box*/
+}
+
+.hover-image-frame{
+    background-color: hsla(178, 100%, 50%, 0.4);
+    height: 310px;
+    width: 310px;
+    /* aligner l'icone dans le cadre */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 12px;
+    opacity: 0;
+}
+
+
+/* .hover-image-frame pour indiquer quel class on appel au survol*/
+.image-frame:hover .hover-image-frame
+{
+    opacity: 1;
+    cursor: pointer;
+
+}
+
+h1{
+    font-weight: 600;
+    font-size: 22px;
+    margin-top: 22px;
+}
+
+.product-description{
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.price-text{
+    color: hsl(178, 100%, 50%);
+    font-weight: 400;
+}
+
+.time-text{
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.content-creator{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+hr{
+    height: 1px;
+    border: none;
+    background-color: hsl(215, 32%, 27%); 
+}
+
+.creator-photo-frame{
+    width: 35px;
+}
+
+.creator-photo{
+    width: 100%;
+    border-radius: 50px;
+    border: solid 1.5px #FFF;
+}
+
+
+
+/*___________________  DISPOSITION _______________________*/
+
+.price-info, .time-info{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.price-and-time{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.creator-info{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+h1:hover{
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+span:hover{
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
